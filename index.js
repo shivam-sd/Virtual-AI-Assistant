@@ -102,6 +102,36 @@ const handleAllVoiceCmmands = (command) => {
     else if(command.includes("open the vs code") || command.includes("vs code kholo") || command.includes("vs code")){
         speakFunc("oppening the vs code..")
         window.open("vscode://")
+    }else if(command.includes("open the whatsapp") || command.includes("WhatsApp kholo") || command.includes("whatsapp") || command.includes("kholo WhatsApp kholo")){
+        speakFunc("oppening the whatsapp..")
+        window.open("whatsapp://")
+    }else if(command.includes("open the linkdin") || command.includes("linkedin kholo") || command.includes("linkedin") || command.includes("kholo WhatsApp kholo")){
+        speakFunc("oppening the linkedin..")
+        window.open("linkedin://")
+    }else if(command.includes("shivam kon hai") || command.includes("shivam") || command.includes("who is shivam") || command.includes("who is this shivam")){
+        speakFunc("ha mai Shivam sar ko janti hu unhone mujhe banaya hai..");
+    }else if(command.includes("prakash kaun hai") || command.includes("who is prakash") || command.includes("who is this prakash")){
+        speakFunc("prakash shivam ji ke dost hai");
+    }else if(command.includes("aavesh kaun hai") || command.includes("who is aavesh") || command.includes("who is this aavesh")){
+        speakFunc("avesh lawandiya baaz hai");
+    }else if(command.includes("anuj kaun hai") || command.includes("who is anuj") || command.includes("who is this anuj")){
+        speakFunc("anuj ke baare mai janti hu");
+        speakFunc("bholaaa bhalaaaa tha mai ... shidhaaa sadhaaa tha mai");
+    }else if(command.includes("prashant kaun hai") || command.includes("who is prashant") || command.includes("who is this prashant")){
+        speakFunc("yah wahi ladka hai jo din bhar chilllata rhata hai...");
+    }else if(command.includes("lucky kaun hai") || command.includes("who is lucky") || command.includes("who is this lucky") || command.includes("laki kaun hai")){
+        speakFunc("lucky boby ka bhai hai");
+    }else if(command.includes("boby kaun hai") || command.includes("who is boby") || command.includes("who is this boby") || command.includes("boby kaun hai")){
+        speakFunc("boby lucky ka bhai hai");
+    }else if(command.includes("ratnakar kaun hai") || command.includes("who is ratnakar") || command.includes("who is this ratnakar") || command.includes("ratnakar kaun hai")){
+        speakFunc("ye wahi ladka hai jisko saadi mai baar baar latring lag jaati hai");
+    }else if(command.includes("hamara makan malik kaisa hai") || command.includes("who is makan malik") || command.includes("who is this makan malik") || command.includes("laki kaun hai") || command.includes("makan malik kaun hai") || command.includes("makan malik")){
+        speakFunc("arey mai tumhare makan malik ko janti hu wah bahut bada wala hai .. aage aap samajh jaao.");
+    }else if(command.includes("open the chat gpt") || command.includes("chat gpt") || command.includes("gpt") || command.includes("chat gpt") || command.includes("chat gpt kholo")){
+        speakFunc("oppeming the chat gpt..");
+        window.open("https://chatgpt.com/");
+    }else if(command.includes("tum apne boyfriend ke baare mai batao") || command.includes("boyfriend") || command.includes("tell me about your boyfriend")){
+        speakFunc("mai nahi bataungi mujhe sarram aati hai");
     }
     else{
         speakFunc(`this is, what i found on internet regarding ${command}`)
