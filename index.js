@@ -30,19 +30,19 @@ const greetingFunc = () => {
 }
 
 const startVoiceinput = () => {
-    if('webkitSpeechRecognition' in window){
-        var voiceinput = new webkitSpeechRecognition();
-    }else{
+    if('webkitSpeechRecognition()' in window){
         alert("Your Browser Does Not Support Voice Input"); 
+    }else{
+        var voiceinput = new webkitSpeechRecognition();
     }
     voiceinput.lang = "en-US";
     voiceinput.onresult = (e) => {
         // console.log(e.results[0][0].transcript);
         const spokenText = e.results[0][0].transcript;
         console.log( e.results[0][0].transcript)
-        handleAllVoiceCmmands(spokenText.toLowerCase());
         btn.classList.remove("btn-box");
         btn.innerHTML = ` <i class="fa-solid fa-microphone-lines-slash"></i>`;
+        handleAllVoiceCmmands(spokenText.toLowerCase());
     }
     voiceinput.start();
 }
@@ -113,10 +113,10 @@ const handleAllVoiceCmmands = (command) => {
     }else if(command.includes("prakash kaun hai") || command.includes("who is prakash") || command.includes("who is this prakash")){
         speakFunc("prakash shivam ji ke dost hai");
     }else if(command.includes("aavesh kaun hai") || command.includes("who is aavesh") || command.includes("who is this aavesh")){
-        speakFunc("avesh lawandiya baaz hai");
+        speakFunc("avesh lawndiya baaz hai . din bhar ladhkiyo ke baare me sochta rahata hai")
     }else if(command.includes("anuj kaun hai") || command.includes("who is anuj") || command.includes("who is this anuj")){
         speakFunc("anuj ke baare mai janti hu");
-        speakFunc("bholaaa bhalaaaa tha mai ... shidhaaa sadhaaa tha mai");
+        speakFunc("bholaaa bhalaaaa tha mai ... shidhaaa sadhaaa tha mai .. chhota bachha tha mai..");
     }else if(command.includes("prashant kaun hai") || command.includes("who is prashant") || command.includes("who is this prashant")){
         speakFunc("yah wahi ladka hai jo din bhar chilllata rhata hai...");
     }else if(command.includes("lucky kaun hai") || command.includes("who is lucky") || command.includes("who is this lucky") || command.includes("laki kaun hai")){
@@ -132,6 +132,9 @@ const handleAllVoiceCmmands = (command) => {
         window.open("https://chatgpt.com/");
     }else if(command.includes("tum apne boyfriend ke baare mai batao") || command.includes("boyfriend") || command.includes("tell me about your boyfriend")){
         speakFunc("mai nahi bataungi mujhe sarram aati hai");
+    }
+    else if(command.includes("apne boyfriend ke baare me batao") || command.includes("boyfriend") || command.includes("tell me about your boyfriend")){
+        speakFunc("Nahi mai nahi bataungi mujhe saram aa rhi hai.")
     }
     else{
         speakFunc(`this is, what i found on internet regarding ${command}`)
